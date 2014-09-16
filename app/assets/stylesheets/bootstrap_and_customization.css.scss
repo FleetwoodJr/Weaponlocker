@@ -6,6 +6,14 @@ $navbar-default-link-color: #2c3e50;
 $jumbotron-bg: white;
 $jumbotron-color:#2980b9;
 $headings-color: #ecf0f1;
-$text-color: #bdc3c7;
+$text-color: #2c3e50;
 $navbar-default-link-hover-color: #d35400;
 @import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
