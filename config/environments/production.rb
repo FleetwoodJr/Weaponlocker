@@ -81,5 +81,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #Required for Heroku (Set this to actual HOST NAME)
-  config.action_mailer.default_url_options = { host: 'omr-dandy.herokuapp.com', port:
+  config.action_mailer.default_url_options = { host: 'omr-dandy.herokuapp.com' }
 end
