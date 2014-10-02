@@ -4,14 +4,15 @@
 $font-family-sans-serif: 'Oxygen',"Oxygen/Helvetica Neue", Helvetica, Arial, font-family-sans-serif;
 $body-bg: #ecf0f1;
 $navbar-default-bg: white;
-$navbar-default-link-color: #2c3e50;
+$navbar-inverse-link-color: #ecf0f1;
 $jumbotron-bg: white;
 $jumbotron-color:#2980b9;
 $headings-color: #2c3e50;
 $text-color: #2c3e50;
-$navbar-default-link-hover-color: #d35400;
+$navbar-inverse-link-hover-color: #3498db;
 $panel-default-heading-bg: white;
 $panel-footer-bg: white;
+$navbar-inverse-brand-color: white;
 
 @import 'bootstrap';
 

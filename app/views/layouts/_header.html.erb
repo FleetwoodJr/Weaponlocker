@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   <div class="container"><!--This is that part that beings the container-->
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Sample Application", root_path, class: "navbar-brand" %>
+     </span><i><%= link_to "Share Your Pics!", root_path, class: "navbar-brand" %></i>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,16 +16,29 @@
       
     
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "Project", project_path %></li>
+        <li>
+         <%= link_to root_path do %>
+          <span class="glyphicon glyphicon-home"></span> Home
+            <% end %>
+          </li>
+      <li>
+        <%= link_to about_path do %>
+          <span class="glyphicon glyphicon-info-sign"></span> About
+          <% end %>
+      </li>
+      <li>
+        <%= link_to project_path do %>
+          <span class="glyphicon glyphicon-envelope"></span> Contact
+          <% end %>
+      </li>
       <% if user_signed_in? %>
       <li>
          <%= link_to new_pin_path do %>
           <span class="glyphicon glyphicon-plus"></span> Add Pic
             <% end %>
           </li>
-      <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+      <li><%= link_to edit_user_registration_path do %>
+        <span class= "glyphicon glyphicon-wrench"></span> Account Settings <% end %></li>
       <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
       <% else %>
       <li><%= link_to "Sign In", new_user_session_path %>
