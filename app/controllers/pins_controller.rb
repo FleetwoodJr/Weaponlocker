@@ -54,6 +54,14 @@ class PinsController < ApplicationController
     end
   end
 
+  def like
+ @pin = Pin.find(params[:id])
+ @pin.ups=@pin.ups+1
+ @pin.save
+ render :text => "<div class='up'></div>"+@pin.ups.to_s+" likes"
+ end
+
+
   private
   # Use callbacks to share common setup or constraints between actions.
     def set_pin
@@ -64,6 +72,9 @@ class PinsController < ApplicationController
       @pin = current_user.pins.find_by(id: params[:id])
       redirect_to pins_path, notice: "Hey! You're not authorized to do that to this pin!" if @pin.nil?
     end
+
+
+
 
 
     # Never trust parameters from the scary internet, only allow the white list through.
